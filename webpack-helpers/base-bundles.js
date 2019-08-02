@@ -49,11 +49,12 @@ const es5Bundle = {
     path: path.resolve(__dirname, '../public'),
     publicPath: '/'
   },
-  resolve: {
-    alias: {
-      'react-dom': '@hot-loader/react-dom'
-    }
-  },
+  // uncomment following lines if switching dev-server to this bundle
+  // resolve: {
+  //   alias: {
+  //     'react-dom': '@hot-loader/react-dom'
+  //   }
+  // },
   plugins: [], // so we can push to it
   module: {
     rules: [
