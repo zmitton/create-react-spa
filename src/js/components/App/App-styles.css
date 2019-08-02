@@ -1,0 +1,11 @@
+:global(body) {
+  background-color: seashell;
+}
+
+.header {
+  text-align: center;
+}
+
+.content {
+  color: dodgerblue;
+}

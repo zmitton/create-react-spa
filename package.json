@@ -1,0 +1,50 @@
+{
+  "name": "create-react-spa",
+  "version": "1.0.0",
+  "description": "A bare-bones skeleton for starting a single-page React app",
+  "author": "Michael Allen Warner",
+  "engines": {
+    "node": "^12.3.1"
+  },
+  "main": "server/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack -p",
+    "start": "node --experimental-modules server/server.js",
+    "dev-client": "webpack-dev-server -d --hot --host 0.0.0.0",
+    "dev-server": "nodemon --experimental-modules server/server.js",
+    "dev": "concurrently \"npm run dev-server\" \"npm run dev-client\""
+  },
+  "type": "module",
+  "license": "ISC",
+  "dependencies": {
+    "@hot-loader/react-dom": "^16.8.6",
+    "compression": "^1.7.4",
+    "core-js": "^3.1.4",
+    "express": "^4.17.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-hot-loader": "^4.12.10"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.2",
+    "babel-loader": "^8.0.6",
+    "concurrently": "^4.1.1",
+    "css-loader": "^3.1.0",
+    "eslint": "^6.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "html-webpack-exclude-assets-plugin": "0.0.7",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "nodemon": "^1.19.1",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
+  }
+}
