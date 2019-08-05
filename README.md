@@ -20,7 +20,7 @@ The build script `npm run build` puts the production files into a new `public` f
 
 ## ES6+ and ES5 Bundles
 
-The build stage outputs two JavaScript bundles: a slim ES6+ version, and a polyfill-bloated ES5 version. Browsers that support ES modules will request only the former, while browsers that don’t will request only the latter. To see how this is implemented, take a look at the `<script>` tag at the bottom of [`src/index.html`](./create-react-spa/blob/master/src/index.html#L10).
+The build stage outputs two JavaScript bundles: a slim ES6+ version, and a polyfill-bloated ES5 version. Browsers that support ES modules will request only the former, while browsers that don’t will request only the latter. To see how this is implemented, take a look at the `<script>` tag at the bottom of [`src/index.html`](./src/index.html#L10).
 
 Babel is configured to load polyfills into the ES5 version for any JavaScript used in the app that IE10 doesn’t support (unless it’s used by something in `node_modules`, which is why we import `map` and `set` directly into `src/js/es5-index.js`). This doesn’t cover DOM polyfills. To change which browsers to target for JS polyfill support, edit the Babel settings for `es5Bundle` in `webpack-helpers/base-bundles.js` as needed (at the bottom of the file).
 
